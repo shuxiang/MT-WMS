@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="">
+<meta name="author" content="">
+<title>登录MT-WMS系统PDA</title>
+</head>
+
+<body>
+<div class="container wrapper">
+    <div class="row site-header">
+        <h3 class="t-a-c">MT-WMS系统PDA</h3>
+    </div>
+    <div class="row">
+        <form class="form-horizontal login-form" method="POST" action="{{url_for('auth.login_pda_api')}}">
+          <!--
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><h3 class="t-a-c">CloudWMS云仓</h3></label>
+          </div>-->
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label">公司</label>
+            <div class="col-sm-5">
+              <input type="text" id="company" class="form-control" name="company" placeholder="Company, 公司代码, 公司名称">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-4 control-label">用户</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="code" placeholder="Name, 用户名, 手机号">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="password" class="col-sm-4 control-label">密码</label>
+            <div class="col-sm-5">
+              <input type="password" class="form-control" name="password" placeholder="Password, 密码">
+            </div>
+          </div>
+          {%-if error%}
+          <div class="form-group error">
+            <label for="password" class="col-sm-4 control-label">错误</label>
+            <div class="col-sm-6">
+              <span>{{error.msg}}</span>
+            </div>
+          </div>
+          {%-endif%}
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-5">
+              <button type="submit" class="btn btn-default">登录</button>
+            </div>
+          </div>
+        </form>
+        <div style="text-align: center;color:red;font-weight: bold;" id="warn"><br/>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="copy-right t-a-c">
+    </div>
+</footer>
+</body>
+<style>
+body{
+  background-image: url('/static/img/index.jpg');
+}
+form{
+  background-color: white;
+}
+* {
+margin: 0;
+}
+
+html, body {
+height: 100%;
+}
+.wrapper {
+min-height: 90%;
+height: auto !important;
+height: 90%;
+margin: 0 auto -4em;
+}
+.footer{
+    height: 30px;
+    margin-top: 50px;
+}
+
+.t-a-c{text-align: center;}
+.site-header{height: 100px;line-height: 100px;}
+.login-form{width:400px;margin:0px auto;text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border: 2px #db5a6b dotted;
+  border-radius: 20px;
+}
+.login-form input{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    -webkit-font-feature-settings: 'tnum';
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: 32px;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.login-form button {
+    line-height: 1.499;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+    cursor: pointer;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 0 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    color: rgba(0, 0, 0, 0.65);
+    background-color: #fff;
+    border-color: #d9d9d9;
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+.error{color:red;}
+.error span{height: 35px;line-height: 35px;}
+.form-group{margin-top:10px;margin-left: 20px;}
+
+
+</style>
+<script type="text/javascript">
+document.getElementById('company').focus(); 
+</script>
+</html>

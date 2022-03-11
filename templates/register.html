@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit"/>
+<meta name="force-rendering" content="webkit"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="">
+<meta name="author" content="">
+<title>注册MT-WMS系统</title>
+<style>
+  body{
+    background-image: url('/static/img/index.jpg');
+  }
+  form{
+    background-color: white;
+  }
+  * {
+  margin: 0;
+  }
+
+  html, body {
+  height: 100%;
+  }
+  .wrapper {
+  min-height: 90%;
+  height: auto !important;
+  height: 90%;
+  margin: 0 auto -4em;
+  }
+  .footer{
+      height: 30px;
+      margin-top: 50px;
+  }
+
+  .t-a-c{text-align: center;}
+  .site-header{height: 100px;line-height: 100px;}
+  .login-form{width:500px;margin:0px auto;text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border: 2px #db5a6b dotted;
+    border-radius: 20px;
+  }
+  .login-form input{
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-variant: tabular-nums;
+      list-style: none;
+      -webkit-font-feature-settings: 'tnum';
+      font-feature-settings: 'tnum';
+      position: relative;
+      display: inline-block;
+      width: 80%;
+      height: 32px;
+      padding: 4px 11px;
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      line-height: 1.5;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+  }
+  .login-form button {
+      line-height: 1.499;
+      position: relative;
+      display: inline-block;
+      font-weight: 400;
+      white-space: nowrap;
+      text-align: center;
+      background-image: none;
+      border: 1px solid transparent;
+      -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
+      cursor: pointer;
+      -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      height: 32px;
+      padding: 0 15px;
+      font-size: 14px;
+      border-radius: 4px;
+      color: rgba(0, 0, 0, 0.65);
+      background-color: #fff;
+      border-color: #d9d9d9;
+      color: #fff;
+      background-color: #1890ff;
+      border-color: #1890ff;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+  }
+  .error{color:red;}
+  .error span{height: 35px;line-height: 35px;}
+  .form-group{margin-top:10px;margin-left: 20px;}
+  .red{color:red;}.orange{color: orange;}.green{color: green;}
+</style>
+</head>
+<body>
+<div class="container wrapper">
+    <div class="row site-header">
+        <h3 class="t-a-c">注册MFOS云系统</h3>
+    </div>
+    <div class="row">
+        <form class="form-horizontal login-form" method="POST" action="{{url_for('auth.register_api')}}">
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label red">手机号</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="user_code" id="user_code" placeholder="手机号" >
+            </div>
+            <div class="col-sm-6 orange">
+            </div>
+            <div class="col-sm-6 green">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label red">姓名</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="user_name" id="user_name" placeholder="姓名">
+            </div>
+            <div class="col-sm-6 orange">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label red">公司</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="company" id="company" placeholder="Company, 公司代码, 公司名称">
+            </div>
+            <div class="col-sm-6 orange">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label red">密码</label>
+            <div class="col-sm-5">
+              <input type="password" class="form-control" name="user_password" id="user_password" placeholder="请使用数字,英文字母等组成, 至少6位">
+            </div>
+            <div class="col-sm-6 orange">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label red">再次确认</label>
+            <div class="col-sm-5">
+              <input type="password" class="form-control" name="user_password2" id="user_password2" placeholder="再次输入密码">
+            </div>
+            <div class="col-sm-6 orange">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label">邮箱</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label">地址</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="address" placeholder="地址, 联系地址">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company" class="col-sm-4 control-label">备注</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" name="remark" placeholder="备注, 其他联系方式, 公司行业">
+            </div>
+          </div>
+          {%-if error%}
+          <div class="form-group error">
+            <label for="error" class="col-sm-4 control-label">错误</label>
+            <div class="col-sm-6 red">
+              <span>{{error.msg}}</span>
+            </div>
+          </div>
+          {%-endif%}
+          <div class="form-group error">
+            <div class="col-sm-6 red">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-5">
+              <a href="{{ url_for('auth.login_api') }}" style="color:green; text-decoration:none;margin-right:60px;">登录</a>
+              <button type="submit" id="submit" class="btn btn-default">注册</button>
+            </div>
+          </div>
+        </form>
+        <div style="text-align: center;color:red;font-weight: bold;" id="warn"><br/>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="copy-right t-a-c">
+    </div>
+</footer>
+</body>
+<script type="text/javascript" src="https://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+  function get_browser(){
+      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串
+      var isOpera = userAgent.indexOf("Opera") > -1;
+      if (isOpera) {
+          return "Opera"
+      }; //判断是否Opera浏览器
+      if (userAgent.indexOf("Firefox") > -1) {
+          return "FF";
+      } //判断是否Firefox浏览器
+      if (userAgent.indexOf("Chrome") > -1){
+        return "Chrome";
+       }
+      if (userAgent.indexOf("Safari") > -1) {
+          return "Safari";
+      } //判断是否Safari浏览器
+      if (userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1 && !isOpera) {
+          return "IE";
+      }; //判断是否IE浏览器
+  }
+  var br = get_browser();
+
+  if ("Chrome" == br) {
+      console.log("Chrome");
+  }else{
+    if("IE" == br){
+      console.log("IE");
+    }else{
+      console.log(br)
+    }
+    document.getElementById('warn').innerHTML = '为了更好的使用体验，建议您下载Chrome浏览器登录<br>（ Chrome浏览器下载官网：<a href="https://www.google.cn/chrome/browser/desktop/index.html#eula" target="_blank" style="color:blue;">https://www.google.cn/chrome/browser/desktop/index.html#eula</a> ）';
+  }
+  function form2JsonString(form) {
+    var paramArray = form.serializeArray();
+    /*请求参数转json对象*/
+    var jsonObj={};
+    $(paramArray).each(function(){
+      jsonObj[this.name]=this.value;
+    });
+    // json对象再转换成json字符串
+    return JSON.stringify(jsonObj);
+  }
+</script>
+<script type="text/javascript">
+var url = "{{url_for('auth.register_api')}}";
+var valid_url = "{{url_for('auth.register_code_api')}}";
+var login_url = "{{url_for('auth.login_api')}}";
+
+$(function(){
+
+  $('#submit').on('click', function(e){
+    e.preventDefault()
+    var user_code = $('#user_code')
+    var user_password = $('#user_password')
+    var user_password2 = $('#user_password2')
+    var user_name = $('#user_name')
+    var company = $('#company')
+
+    if(user_code.val().length < 11){
+      user_code.parent().siblings('.col-sm-6.orange').html('请输入正确的手机号码')
+      return false
+    }else{
+      user_code.parent().siblings('.col-sm-6.orange').html('')
+    }
+
+    if(user_name.val().length<1){
+      user_name.parent().siblings('.col-sm-6.orange').html('请填写姓名')
+      return false
+    }else{
+      user_name.parent().siblings('.col-sm-6.orange').html('')
+    }
+    if(company.val().length<2){
+      company.parent().siblings('.col-sm-6.orange').html('公司名称太短')
+      return false
+    }else{
+      company.parent().siblings('.col-sm-6.orange').html('')
+    }
+
+    if(user_password.val().length<6){
+      user_password.parent().siblings('.col-sm-6.orange').html('密码不得少于6位')
+      return false
+    }else{
+      user_password.parent().siblings('.col-sm-6.orange').html('')
+    }
+    if(user_password.val()!=user_password2.val()){
+      user_password2.parent().siblings('.col-sm-6.orange').html('前后输入密码不一致')
+      return false
+    }else{
+      user_password2.parent().siblings('.col-sm-6.orange').html('')
+    }
+
+    var data = form2JsonString($(".login-form"))
+    console.log(data)
+    $.ajax({
+      type: "POST",
+      url: url,
+      data: data,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(resp){
+        console.log(resp)
+        if(resp.status=='success'){
+          window.location.href = login_url
+        }else{
+          $('.error .col-sm-6').html('错误: '+resp.msg)
+          return false
+        }
+      }
+    });
+
+    return true
+  })
+
+  var user_code = $('#user_code')
+  user_code.focus()
+})
+</script>
+</html>

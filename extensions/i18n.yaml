@@ -1,0 +1,6 @@
+sample:
+  en: hello
+  cn: 吃了没
+  oo: "{u}吃了{c:0.3f}没{d:04d}"
+样例:
+  en: sample
