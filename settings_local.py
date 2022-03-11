@@ -25,7 +25,7 @@ TPL_DIR = os.environ.get('TPL_DIR', 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY', '\xce\xa1\xc3\xa5\xfa\xec\xd4\xe6\xc9\xcd\xfa')
 SESSION_COOKIE_NAME = os.environ.get('SESSION_COOKIE_NAME', 'mtwms') # 同一ip不同端口，名字相同的cookie在浏览器里会互相影响
 
-TEST_USER_ID = int(os.environ.get('TEST_USER_ID', '1'))
+TEST_USER_ID = int(os.environ.get('TEST_USER_ID', '2'))
 
 CORS_HOST = os.environ.get('CORS_HOST', '*')
 #CORS_HOST = os.environ.get('CORS_HOST', 'http://127.0.0.1:9030')#PDA
