@@ -14,7 +14,10 @@ MT-WMS是已在多个大公司里使用的系统的简化版, 只开源了核心
 pip3 install -r requirements.txt
 修改 settings_local.py 的 SQLALCHEMY_DATABASE_URI 与 SQLALCHEMY_BINDS 的数据库连接地址
 Flask版本为2.0.3, 前端版本 VUE 2.6.11 antd-design-vue 1.6.2
-前端地址: https://github.com/shuxiang/MT-WMS-Front
+[前端地址](https://github.com/shuxiang/MT-WMS-Front)
+[文档地址](https://www.m-front.cn/docs#/dash)
+先上测试用户信息: 公司 test 用户名 test  密码 123456 [线上帐户测试地址](https://wms.m-front.cn/auth/login)
+线上注册即可使用[免费注册地址](https://wms.m-front.cn/auth/register)
 
 ### 初始化数据(init data)
 ```
