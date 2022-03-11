@@ -22,9 +22,9 @@ Flask版本为2.0.3, 前端版本 VUE 2.6.11 antd-design-vue 1.6.2
 
 [文档地址](https://www.m-front.cn/docs#/dash)
 
-先上测试用户信息: 公司 test 用户名 test  密码 123456 [线上帐户测试地址](https://wms.m-front.cn/auth/login)
+线上测试用户信息: 公司 test 用户名 test  密码 123456 [线上测试帐户登录地址](https://wms.m-front.cn/auth/login)
 
-线上注册即可使用[免费注册地址](https://wms.m-front.cn/auth/register)
+线上免费注册即可使用[免费注册地址](https://wms.m-front.cn/auth/register)
 
 ### 初始化数据(init data)
 ```
