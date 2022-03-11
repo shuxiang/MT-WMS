@@ -7,6 +7,15 @@ MT-WMS 是开源的WMS(仓储管理系统)
 
 MT-WMS是已在多个大公司里使用的系统的简化版, 只开源了核心的仓库操作功能, 代码基本没有封装, 简单易懂易维护. MT-WMS支持PDA, Web, App. 目前只开源Web的前后端代码, 后续会开源PDA代码.
 
+
+[前端地址](https://github.com/shuxiang/MT-WMS-Front)
+
+[文档地址](https://www.m-front.cn/docs#/dash)
+
+线上测试用户信息: 公司 test 用户名 test  密码 123456 [线上测试帐户登录地址](https://wms.m-front.cn/auth/login)
+
+线上免费注册即可使用[免费注册地址](https://wms.m-front.cn/auth/register)
+
 ## 开发运行/部署
 
 
@@ -18,13 +27,6 @@ pip3 install -r requirements.txt
 
 Flask版本为2.0.3, 前端版本 VUE 2.6.11 antd-design-vue 1.6.2
 
-[前端地址](https://github.com/shuxiang/MT-WMS-Front)
-
-[文档地址](https://www.m-front.cn/docs#/dash)
-
-线上测试用户信息: 公司 test 用户名 test  密码 123456 [线上测试帐户登录地址](https://wms.m-front.cn/auth/login)
-
-线上免费注册即可使用[免费注册地址](https://wms.m-front.cn/auth/register)
 
 ### 初始化数据(init data)
 ```
@@ -49,7 +51,7 @@ flask db migrate
 flask db upgrade
 ```
 
-### 重置密码
+### 命令行重置管理员密码
 ```
 flask shell
 >>> u = db.M('User')
