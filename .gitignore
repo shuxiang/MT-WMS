@@ -38,3 +38,4 @@ setup.py
 Dockerfile
 Dockerfile_base
 wms.yml
+cp2mt.sh

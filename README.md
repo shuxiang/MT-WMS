@@ -43,7 +43,7 @@ flask db upgrade
 ```
 flask shell
 >>> u = db.M('User')
->>> u1 = u.query.get(1)
+>>> u1 = u.query.get(2)
 >>> u1.set_password('admin123456')
 >>> db.session.commit()
 ```

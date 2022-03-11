@@ -37,6 +37,8 @@ def init_data():
     user.xtype = 'monitor'
     dbm.session.add(user)
 
+    dbm.session.flush()
+
     admin = User(code='admin', password=AuthAction.encrypt_password('admin123456'), name=u"管理员")
     admin.company_code = comp.code
     admin.set_perm('manager')
