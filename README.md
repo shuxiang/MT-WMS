@@ -5,9 +5,7 @@ MT-WMS 是开源的WMS(仓储管理系统)
 
 
 MT-WMS is a opensource Warehouse Management System, it support multi warehouses and multi owners.
-
 if you need help or custom functions, please contact: QQ 3527477665 WX:shuxiang29 MAIL: 703647752@qq.com
-
 [Documents is here](http://47.96.118.117/static/wms-docs/mt-wms.html)
 
 
@@ -23,7 +21,6 @@ MT-WMS是已在多个大公司里使用的系统的简化版, 只开源了核心
 [线上测试帐户登录地址](http://47.96.118.117:5070/auth/login)线上测试用户信息: 公司 test 用户名 test  密码 123456 
 
 [English version testing login address](http://47.96.118.117:5070/auth/login/en)
-
 testing account(company username password):  test  test 123456 
 
 线上免费注册即可使用[免费注册地址(free registry)](https://wms.m-front.cn/auth/register)
