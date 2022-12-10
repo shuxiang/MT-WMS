@@ -4,8 +4,9 @@ MT-WMS 是开源的WMS(仓储管理系统)
 遵循Apache License 2.0协议，前后端分离，可以支持多仓多货主，订单入库出库, 波次合并拣货出库.
 
 MT-WMS is a opensource Warehouse Management System, it support multi warehouses and multi owners.
+if you need help or custom functions, please contact: QQ 3527477665 WX:shuxiang29 MAIL: 703647752@qq.com
 
-系统可以当作WMS来使用, 管理货物; 也可以充当ERP来使用, 进行进销存管理. 电商用户可以自行开发对接奇门QIMEN, 京东JD等电商的接口, 接收平台订单. 也可以联系作者进行功能定制, 添加新的统计图表等. 添加BOM功能和相应的生产流程后, 亦可充当MES使用. 定制系统请联系(please contact: QQ 3527477665 WX:shuxiang MAIL: 703647752@qq.com)
+系统可以当作WMS来使用, 管理货物; 也可以充当ERP来使用, 进行进销存管理. 电商用户可以自行开发对接奇门QIMEN, 京东JD等电商的接口, 接收平台订单. 也可以联系作者进行功能定制, 添加新的统计图表等. 添加BOM功能和相应的生产流程后, 亦可充当MES使用. 定制系统请联系(QQ 3527477665 WX:shuxiang MAIL: 703647752@qq.com)
 
 MT-WMS是已在多个大公司里使用的系统的简化版, 只开源了核心的仓库操作功能, 代码基本没有封装, 简单易懂易维护. MT-WMS支持PDA, Web, App. 目前只开源Web的前后端代码.
 
