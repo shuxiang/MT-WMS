@@ -23,7 +23,7 @@ MT-WMS是已在多个大公司里使用的系统的简化版, 只开源了核心
 [English version testing login address](http://47.96.118.117:5070/auth/login/en)
 testing account(company username password):  test  test 123456 
 
-线上免费注册即可使用[免费注册地址(free registry)](https://wms.m-front.cn/auth/register)
+线上免费注册即可使用[免费注册地址(free registry)](http://47.96.118.117:5070/auth/register)
 
 ## 开发运行/部署
 
