@@ -63,6 +63,7 @@ flask db upgrade
 ### 命令行重置管理员密码
 ```
 flask shell
+>>> from app import db
 >>> u = db.M('User')
 >>> u1 = u.query.get(2)
 >>> u1.set_password('admin123456')
