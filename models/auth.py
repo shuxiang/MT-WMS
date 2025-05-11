@@ -777,8 +777,8 @@ class Config(db.Model):
 # 递增序列号, 用来生成单号
 class Seq(db.Model):
     __tablename__ = 's_seq'
-    __table_args__ = (Index("ix_s_config_code", "company_code", "code"),
-                      Index("ix_s_config_tenant", "company_code", 'warehouse_code', "owner_code",),
+    __table_args__ = (Index("ix_s_seq_code", "company_code", "code"),
+                      Index("ix_s_seq_tenant", "company_code", 'warehouse_code', "owner_code",),
                       )
 
     id = db.Column(db.Integer, primary_key=True)

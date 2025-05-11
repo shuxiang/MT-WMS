@@ -305,8 +305,8 @@ class InvRfid(db.Model):
 class InvRfidTrans(db.Model):
     __tablename__ = 'inv_rfid_trans'
     __table_args__ = (
-                      Index("ix_invrfid_rfid", "company_code", 'warehouse_code', "owner_code", "rfid"),
-                      Index("ix_invrfid_tenant", "company_code", 'warehouse_code', "owner_code",),
+                      Index("ix_invrfid_trans_rfid", "company_code", 'warehouse_code', "owner_code", "rfid"),
+                      Index("ix_invrfid_trans_tenant", "company_code", 'warehouse_code', "owner_code",),
                       )
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
